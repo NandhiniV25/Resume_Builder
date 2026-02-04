@@ -1,0 +1,1003 @@
+Delivered-To: vnandhini25012006@gmail.com
+Received: by 2002:a05:6e04:488e:b0:3b2:4a98:114 with SMTP id cq14csp2918911imd;
+        Tue, 3 Feb 2026 18:33:50 -0800 (PST)
+X-Received: by 2002:a05:6820:6fcd:b0:66a:adbb:31bf with SMTP id 006d021491bc7-66aadbb3489mr82627eaf.62.1770172430752;
+        Tue, 03 Feb 2026 18:33:50 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1770172430; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NEjwI6/7aJZf8DWSLWRh+D0gRfCki4wqswW+DALkTBNfzAQobZRKAkbeCJ5DKvevZ9
+         4i1SJQf78LfS0RcvLWmcrYjcTX4p/uWhdeS1Qf55H34hTGGFbtlkzukHXUHGfxWOKsPG
+         5PeRQbmPZh6gCogn2E0k4VXwfykKGd1gotTUg8yknVTz6Z1ptOl9mmZ7liSNWx5qkzsH
+         KjX/+LfreYvg9/11toeO6tcqQL1CfnmtIx/WKB6cbSxAoXhL2QbpZRoS7kP4t1RYzCo8
+         LqOmcOCebYBtTKh0dH5rxnRofoEv0Th+qR+sAMHu1kuV2Q3KM6uwYb2KFcfYoKnj9/aZ
+         ekrA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :dkim-signature;
+        bh=jzA67nYMKhK58vVTJ0HjfryOCtPPW1irhI8tlPbezTU=;
+        fh=1b72AigIcbt0uKkvZhZK94m6Gkhd7fqwQ6sCbEXPu1A=;
+        b=fObt81yii8LBxn9nMmUCT4VtGN8qBjT71sIPbM/ejkkXfJ0MT0UF3No+n4cpVa+fKE
+         kH+CfUgTsizHaeYYPkNCqQVh3e4PkTpcp2FIbj7c6B8Rb6RI8V+039n6K91VQAmWz8my
+         hAB2JR5FDPhRXy1YdKKCiEMOaf378qBw6Wysd55iQAzEzQGEmIao1Us4tXD5CWkrBQUd
+         ueMJ1+d32n3QtG/KzorFzUjk4xxtbzXZY0b0dDMiKVVaoKqonhePBu9RkpkFblEz+iqK
+         AKfGS/beIgvcgnxsHqCAsBznDcnEK1wbZl1pvw63tGjwOJJKBEq6yw0Qnm72IDQebFw+
+         Zm4Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=XSa1XgN1;
+       spf=pass (google.com: domain of 3drccarykamsw5839-8vtvz6a9-458v62fx55x2v.t53@trix.bounces.google.com designates 209.85.220.77 as permitted sender) smtp.mailfrom=3DrCCaRYKAMsw5839-8vtvz6A9-458v62Fx55x2v.t53@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3DrCCaRYKAMsw5839-8vtvz6A9-458v62Fx55x2v.t53@trix.bounces.google.com>
+Received: from mail-sor-f77.google.com (mail-sor-f77.google.com. [209.85.220.77])
+        by mx.google.com with SMTPS id 006d021491bc7-66a308c3af1sor407825eaf.0.2026.02.03.18.33.50
+        for <vnandhini25012006@gmail.com>
+        (Google Transport Security);
+        Tue, 03 Feb 2026 18:33:50 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3drccarykamsw5839-8vtvz6a9-458v62fx55x2v.t53@trix.bounces.google.com designates 209.85.220.77 as permitted sender) client-ip=209.85.220.77;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=XSa1XgN1;
+       spf=pass (google.com: domain of 3drccarykamsw5839-8vtvz6a9-458v62fx55x2v.t53@trix.bounces.google.com designates 209.85.220.77 as permitted sender) smtp.mailfrom=3DrCCaRYKAMsw5839-8vtvz6A9-458v62Fx55x2v.t53@trix.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1770172430; x=1770777230; dara=google.com;
+        h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=jzA67nYMKhK58vVTJ0HjfryOCtPPW1irhI8tlPbezTU=;
+        b=XSa1XgN1GZqOI1dKfrPJKqAF01tdV8O5xb/46K4GfBPwggiguP5WnDdeYnuSAsvgUA
+         e4vWZ/JEeTqDFYtHy2u1u55OOZmC+LKI5FZUANPOj3b9qwd0ZxFSkxl16yJ+aKXYcNq9
+         f3ldoFxLCcyZnUjNzlh1Jo8DFNlELBUvjSmH7571vrNCXCsPeEuaoGwW5D/EfsXLFkqF
+         gV62yYO25fPA6iucQIRjqQhLU+MjRFP3fe9wah/kHUyH7NiUIRMXJa5Xf/hcsI/un5jQ
+         TzxuAJUzP72tqKMXzTevDp9xlCb9H0V9EJO4BiMgqw4NPHSBhhuAXAfA+4w/X6DT46OZ
+         zq6Q==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1770172430; x=1770777230;
+        h=to:from:subject:date:message-id:feedback-id:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=jzA67nYMKhK58vVTJ0HjfryOCtPPW1irhI8tlPbezTU=;
+        b=S0sR5+m12vRKiTdB+ZXpI2TzeyibNxEtPeRLNpPDQTqRhAks7VDmKvYBDVQQPhTKyY
+         vW9wtxvmOkGlXjOzQHSQM9RzAsOIZsVcGRT+QNQkkXZ1Ny0VUwHBtMPhpm8B7SnfURh1
+         Np3e6jm+jL1ciboWiPQmdw5QNH24W5S6w24dqJ5Fxj3SE5gg+0oz6opaw/qle94U9dgO
+         ujQ/ImKsAT/EI3AwStf/FymN+ZJ2MnzcASOLHyx7y/G1jef89fTvVHtZbKRe59tg9R1A
+         faKTeGLChbARr5NminebZn5+pc5UDqI3uGDzIOmtCUL/g70nYSxVGEktPbl2sSstdAZK
+         3zng==
+X-Gm-Message-State: AOJu0YwblZ4REwOpWK0raPPnexPbYT02Xqy5njIe22Pf2vF3GXDzGjJ4
+	tPa1BoSu3fufQxQwNpp65Ckaqm+U5WQW7NgccW8yiJ1ahtvjXQL3RP93XfwJ9pb5t+NF4eQWNSR
+	kbNRXgtrncQ8RDCo5PYwP2DDGDdZYv+Lo9NjyN4SFgA==
+MIME-Version: 1.0
+X-Received: by 2002:a05:6820:c83:b0:65d:2872:31a6 with SMTP id
+ 006d021491bc7-66a20592e6emr858894eaf.17.1770172430360; Tue, 03 Feb 2026
+ 18:33:50 -0800 (PST)
+Feedback-ID: MailTypeResponseReceipt:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLSfhKGjf-pVJK3KupGfdXRKpSKGaDcbf18G3e_dlmvnhRKtvMA
+X-GoogleForms-IsConsumerForm: true
+Message-ID: <autogen-java-aea7d616-6164-40ef-bc05-422b36f32981@google.com>
+Date: Wed, 04 Feb 2026 02:33:50 +0000
+Subject: Thanks for filling in this form: Project-Based Learning (PBL) Report
+From: Forms response receipts <forms-receipts-noreply@google.com>
+To: vnandhini25012006@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000e731520649f6622b"
+
+--000000000000e731520649f6622b
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+R29vZ2xlIEZvcm1zDQoNCg0KVGhhbmtzIGZvciBmaWxsaW5nIGluIHRoaXMgZm9ybTogUHJvamVj
+dC1CYXNlZCBMZWFybmluZyAoUEJMKSBSZXBvcnQNCg0KDQpZb3UncmUgcmVjZWl2aW5nIHRoaXMg
+ZW1haWwgYmVjYXVzZSB5b3UgZmlsbGVkIGluIHRoZSBmb2xsb3dpbmcgZm9ybSB1c2luZyAgDQp5
+b3VyIGVtYWlsIGFkZHJlc3MuIE1ha2Ugc3VyZSB0aGF0IHlvdSByZWNvZ25pc2UgYW5kIHRydXN0
+IHRoaXMgZm9ybSBiZWZvcmUgIA0KY29weWluZyBvciBjbGlja2luZyBvbiBhbnkgbGlua3MuIElm
+IGl0IGxvb2tzIHN1c3BpY2lvdXMsIHJlcG9ydCBpdC4gVGhlICANCmNvbnRlbnQgb2YgdGhpcyBm
+b3JtIGlzIG5vdCBjcmVhdGVkIG9yIGVuZG9yc2VkIGJ5IEdvb2dsZS4NCg0KSGVyZSdzIHdoYXQg
+d2FzIHJlY2VpdmVkLg0KDQpFZGl0IHJlc3BvbnNlDQoNCg0KUHJvamVjdC1CYXNlZCBMZWFybmlu
+ZyAoUEJMKSBSZXBvcnQNCg0KDQpCZWZvcmUgeW91IGJlZ2luIGZpbGxpbmcgb3V0IHRoaXMgZm9y
+bSwgcGxlYXNlIG1ha2Ugc3VyZSB5b3UgaGF2ZSB0aGUgIA0KZm9sbG93aW5nIGl0ZW1zIHJlYWR5
+Og0KDQoNCg0KWW91ciBkYXktd2lzZSBub3RlcyBmb3IgYWxsIHN0YWdlcyBvZiBEZXNpZ24gVGhp
+bmtpbmcg4oCUIEVtcGF0aGl6ZSwgRGVmaW5lLCAgDQpJZGVhdGUsIFByb3RvdHlwZSwgYW5kIFRl
+c3QNCg0KDQpTY3JlZW5zaG90cyBvZiB5b3VyIGlubm92YXRpb24NCg0KDQpTY3JlZW4gcmVjb3Jk
+aW5ncyBzaG93Y2FzaW5nIHlvdXIgaW5ub3ZhdGlvbidzIHdvcmtpbmcgbW9kZWwNCg0KDQpJbWFn
+ZXMgb2YgeW91ciBpbm5vdmF0aW9uIGNyZWF0ZWQgZHVyaW5nIHRoZSBEYXkgMiB0YWtlLWhvbWUg
+dGFzaw0KDQoNClRoaXMgZm9ybSBpcyBkZXNpZ25lZCB0byBjYXB0dXJlIHlvdXIgcmVmbGVjdGlv
+bnMsIGlkZWFzLCBhbmQgbGVhcm5pbmdzICANCmZyb20gdGhlIGlubm92YXRpb25zIHlvdSBkZXZl
+bG9wZWQgYXMgcGFydCBvZiB0aGUgSUJNIFNraWxsc0J1aWxkIFBCTCAgDQphY3Rpdml0eS4gUGxl
+YXNlIHRha2UgNeKAkzEwIG1pbnV0ZXMgdG8gY29tcGxldGUgaXQgdGhvdWdodGZ1bGx5IGFuZCBo
+b25lc3RseS4NCg0KDQpFbWFpbCAqDQoNCg0Kdm5hbmRoaW5pMjUwMTIwMDZAZ21haWwuY29tDQoN
+Cg0KTmFtZSAqDQoNCg0KTkFOREhJTkkgVg0KDQoNCkVtYWlsIElEIChhcyBwZXIgSUJNIFNraWxs
+cyBCdWlsZCkgKg0KDQoNCnZuYW5kaGluaTI1MDEyMDA2QGdtYWlsLmNvbQ0KDQoNClBob25lIG51
+bWJlciAqDQoNCg0KNjM3NDUyNDQyMQ0KDQoNClRyYWluZXIgbmFtZSAqDQoNCg0KQXBhcm5hIC5S
+DQoNCg0KU2FuamFpIC5NDQoNCg0KUmFqdSAuUA0KDQoNCkNvbGxlZ2UgTmFtZSAqDQoNCg0KVW5p
+dmVyc2l0eSBDb2xsZWdlIG9mIEVuZ2luZWVyaW5nLEthbmNoaXB1cmFtDQoNCg0KUXVhbGlmaWNh
+dGlvbiAoRGVncmVlKSAqDQoNCg0KQkUgQ29tcHV0ZXIgU2NpZW5jZSBhbmQgRW5naW5lZXJpbmcN
+Cg0KDQpEYXkgMQ0KDQpEZXNpZ24gVGhpbmtpbmcgUHJvY2VzcyBTdGVwIDEgJiAyOiBFbXBhdGhp
+c2UgJiBEZWZpbmUNCg0KDQpTdGVwIDE6IFVuZGVyc3RhbmRpbmcgdGhlIE5lZWQgKg0KDQoNCldo
+aWNoIHByb2JsZW0gYW0gSSB0cnlpbmcgdG8gc29sdmU/DQoNCg0KDQrigJxUaGUgcHJvYmxlbSBp
+cyB0aGUgZGlmZmljdWx0eSBpbiBjcmVhdGluZyBhIHdlbGwtc3RydWN0dXJlZCwgcHJvZmVzc2lv
+bmFsLCAgDQphbmQgQVRTLWZyaWVuZGx5IHJlc3VtZS4gTWFueSB1c2VycyBzdHJ1Z2dsZSB0byBj
+bGVhcmx5IHByZXNlbnQgdGhlaXIgIA0Kc2tpbGxzIGFuZCBleHBlcmllbmNlIGluIGEgd2F5IHRo
+YXQgYXR0cmFjdHMgcmVjcnVpdGVycy7igJ0NCg0KDQpTdGVwIDI6IFdoYXQgaXMgdGhlIHByb2Js
+ZW0/DQoNCg0KVGhlIHByb2JsZW0gSSB3YW50IHRvIHNvbHZlIGluIG9uZSBjbGVhciBzZW50ZW5j
+ZQ0KDQoNCltZb3UgY2FuIHRyeSBhIHByb21wdCBsaWtlIHRoaXM6IOKAnEkgYW0gaWRlYXRpbmcg
+YSBzb2x1dGlvbiBmb3IgPGVudGVyIHlvdXIgIA0KcHJvYmxlbSBpbiBkZXRhaWw+IENvbnZlcnQg
+dGhpcyBwcm9ibGVtIGludG8gYSBzaW5nbGUgY2xlYXIgc2VudGVuY2Ugd2hpY2ggIA0KSSBjYW4g
+c2hhcmUgdG8gYW4gYXVkaWVuY2XigJ1dDQoNCg0K4oCc4oCcSSBhbSBpZGVhdGluZyBhIHNvbHV0
+aW9uIGZvciB0aGUgcHJvYmxlbSB3aGVyZSBtYW55IGluZGl2aWR1YWxzIHN0cnVnZ2xlICANCnRv
+IGNyZWF0ZSBwcm9mZXNzaW9uYWwsIHdlbGwtc3RydWN0dXJlZCwgYW5kIEFUUy1mcmllbmRseSBy
+ZXN1bWVzIHRoYXQgIA0KYWNjdXJhdGVseSBzaG93Y2FzZSB0aGVpciBza2lsbHMgYW5kIGV4cGVy
+aWVuY2UuIFRoaXMgbWFrZXMgaXQgZGlmZmljdWx0ICANCmZvciByZWNydWl0ZXJzIHRvIHF1aWNr
+bHkgZXZhbHVhdGUgY2FuZGlkYXRlcyBhbmQgZm9yIGFwcGxpY2FudHMgdG8gc3RhbmQgIA0Kb3V0
+IGluIHRoZSBoaXJpbmcgcHJvY2Vzcy7igJ0NCg0KDQpXaHkgaXMgdGhpcyBwcm9ibGVtIGltcG9y
+dGFudCB0byBzb2x2ZT8gKg0KDQpbWW91IGNhbiB0cnkgYSBwcm9tcHQgbGlrZSB0aGlzOiDigJxE
+cmFmdCAxLTIgbGluZXMgb24gd2h5IHRoaXMgcHJvYmxlbSBpcyAgDQppbXBvcnRhbnQgdG8gc29s
+dmUuIFN1cHBvcnQgdGhpcyB3aXRoIGV2aWRlbmNlIHVzaW5nIHJlbGV2YW50IGRhdGEgcG9pbnRz
+4oCdXQ0KDQoNCuKAnEEgbGFyZ2UgbWFqb3JpdHkgb2YgcmVzdW1lcyBhcmUgZmlsdGVyZWQgb3V0
+IGJlZm9yZSBhIHJlY3J1aXRlciBldmVuIHNlZXMgIA0KdGhlbSDigJQgYXJvdW5kIDcw4oCTNzUl
+IGFyZSByZWplY3RlZCBieSBBVFMgZHVlIHRvIGZvcm1hdCBvciBrZXl3b3JkICANCm1pc21hdGNo
+ZXMg4oCUIG1lYW5pbmcgbWFueSBxdWFsaWZpZWQgY2FuZGlkYXRlcyBuZXZlciBnZXQgY29uc2lk
+ZXJlZC4gIA0KT3B0aW1pemluZyByZXN1bWVzIGlzIHRoZXJlZm9yZSBlc3NlbnRpYWwgdG8gZW5z
+dXJlIHNraWxscyBhbmQgZXhwZXJpZW5jZSAgDQphcmUgYWNjdXJhdGVseSBjb21tdW5pY2F0ZWQg
+aW4gdG9kYXkncyBoaWdobHkgY29tcGV0aXRpdmUgam9iIG1hcmtldCB3aGVyZSAgDQplbXBsb3ll
+cnMgcmVseSBoZWF2aWx5IG9uIHF1aWNrLCBhdXRvbWF0ZWQgc2NyZWVuaW5nLuKAnQ0KDQoNClRh
+a2UtaG9tZSB0YXNrICoNCg0KQXNrIDLigJMzIHBlb3BsZSAoeW91IGNhbiBzcGVhayB0byB5b3Vy
+IGZhbWlseSBtZW1iZXJzLCBmcmllbmRzLCB0ZWFjaGVycywgIA0KdHJhaW5lcnMpIHdoYXQgdGhl
+eSB0aGluayBhYm91dCB0aGlzIHByb2JsZW0uIFdyaXRlIGRvd24gc3VycHJpc2luZyBvciBuZXcg
+IA0KdGhpbmdzIHlvdSBsZWFybiBiZWxvdy4NCg0KDQrigJxBZnRlciBzcGVha2luZyB3aXRoIGEg
+ZmV3IHBlb3BsZSwgYSBrZXkgaW5zaWdodCB3YXMgdGhhdCBkdXJpbmcgdXJnZW50ICANCnNpdHVh
+dGlvbnMgbGlrZSBzdWRkZW4gam9iIG9wcG9ydHVuaXRpZXMgb3IgZW1lcmdlbmNpZXMsIG1hbnkg
+cGVvcGxlIGxvc2UgIA0KdGhlaXIgcmVzdW1lIGZpbGVzIG9yIGRvbid0IGhhdmUgcXVpY2sgYWNj
+ZXNzIHRvIHRoZW0uIFRoZXkgZmVsdCB0aGF0ICANCnJlYnVpbGRpbmcgYSByZXN1bWUgdW5kZXIg
+dGltZSBwcmVzc3VyZSBpcyBzdHJlc3NmdWwgYW5kIGRpZmZpY3VsdC4gVGhpcyAgDQpoaWdobGln
+aHRlZCB0aGUgbmVlZCBmb3IgYW4gZWFzeSwgYWx3YXlzLWFjY2Vzc2libGUgd2F5IHRvIGNyZWF0
+ZSBhbmQgIA0KbWFuYWdlIHJlc3VtZXMu4oCdDQoNCg0KRGF5IDINCg0KRGVzaWduIFRoaW5raW5n
+IFByb2Nlc3MgU3RlcCAzOiBJZGVhdGlvbg0KDQoNClN0ZXAgMzogQnJhaW5zdG9ybWluZyBzb2x1
+dGlvbnMgKg0KDQoNCkxpc3QgYXQgbGVhc3QgNSBkaWZmZXJlbnQgc29sdXRpb25zICh3aWxkIG9y
+IHJlYWxpc3RpYykNCg0KDQpbWW91IGNhbiB0cnkgYSBwcm9tcHQgbGlrZSB0aGlzOiDigJxJIGFt
+IGlkZWF0aW5nIHNvbHV0aW9ucyBmb3IgPGVudGVyIHlvdXIgIA0KcHJvYmxlbSBpbiBkZXRhaWw+
+IFN1Z2dlc3QgNSB1bmlxdWUgc29sdXRpb25zIGZvciB0aGlzIHByb2JsZW0sIHdoaWNoIEkgY2Fu
+ICANCmVhc2lseSBhY2NvbXBsaXNoIGluIDIgZGF5cyB1c2luZyBmcmVlLCBvcGVuLXNvdXJjZSBt
+b2JpbGUtZnJpZW5kbHkgQUkgIA0KdG9vbHPigJ1dDQoNCg0K4oCcSSBhbSBpZGVhdGluZyBzb2x1
+dGlvbnMgdG8gaGVscCB1c2VycyBxdWlja2x5IGNyZWF0ZSBhbmQgYWNjZXNzICANCnByb2Zlc3Np
+b25hbCByZXN1bWVzLCBlc3BlY2lhbGx5IGR1cmluZyB1cmdlbnQgc2l0dWF0aW9ucy4gUG9zc2li
+bGUgIA0Kc29sdXRpb25zIGluY2x1ZGU6IDEuIEFJIFJlc3VtZSBHZW5lcmF0b3Ig4oCTIEF1dG9t
+YXRpY2FsbHkgY3JlYXRlcyAgDQpBVFMtZnJpZW5kbHkgcmVzdW1lcyBmcm9tIHVzZXIgaW5wdXRz
+LiAyLiBNdWx0aXBsZSBQREYgRXhwb3J0IE9wdGlvbnMg4oCTICANCkFsbG93cyB1c2VycyB0byBk
+b3dubG9hZCByZXN1bWVzIGluIGRpZmZlcmVudCBQREYgZm9ybWF0cyBiYXNlZCBvbiBqb2IgIA0K
+bmVlZHMuIDMuIEVhc3kgUmVzdW1lIFZpZXcgTW9kZSDigJMgQSBzaW1wbGUsIG1vYmlsZS1mcmll
+bmRseSB2aWV3IGZvciBxdWljayAgDQphY2Nlc3MgYW5kIHNoYXJpbmcuIDQuIEVtZXJnZW5jeSBS
+ZXN1bWUgQWNjZXNzIOKAkyBTZWN1cmUgY2xvdWQtYmFzZWQgYWNjZXNzICANCnNvIHVzZXJzIGNh
+biByZXRyaWV2ZSB0aGVpciByZXN1bWUgYW55dGltZSwgZXZlbiBpbiBlbWVyZ2VuY2llcy4gNS4g
+IA0KT25lLUNsaWNrIFJlc3VtZSBVcGRhdGUg4oCTIFF1aWNrbHkgZWRpdCBhbmQgcmVnZW5lcmF0
+ZSByZXN1bWVzIHdpdGhvdXQgIA0KcmVidWlsZGluZyBmcm9tIHNjcmF0Y2guDQoNCg0KU3RlcCA0
+OiBNeSBmYXZvdXJpdGUgc29sdXRpb246ICoNCg0KDQrigJxNeSBmYXZvdXJpdGUgc29sdXRpb24g
+aXMgdGhlIEVtZXJnZW5jeSBSZXN1bWUgQWNjZXNzLiBJdCBlbnN1cmVzIHRoYXQgIA0KdXNlcnMg
+Y2FuIHF1aWNrbHkgcmV0cmlldmUgb3Igc2hhcmUgdGhlaXIgcmVzdW1lcyBhbnl0aW1lLCBlc3Bl
+Y2lhbGx5ICANCmR1cmluZyB1cmdlbnQgc2l0dWF0aW9ucywgd2l0aG91dCB0aGUgc3RyZXNzIG9m
+IHNlYXJjaGluZyBmb3IgbG9zdCBmaWxlcy4gIA0KVGhpcyBtYWtlcyB0aGUgcmVzdW1lIGNyZWF0
+aW9uIHByb2Nlc3MgcmVsaWFibGUgYW5kIGhhc3NsZS1mcmVlLuKAnQ0KDQoNClN0ZXAgNTogV2h5
+IGFtIEkgY2hvb3NpbmcgdGhpcyBzb2x1dGlvbj8NCg0KKg0KDQoNCuKAnEkgYW0gY2hvb3Npbmcg
+dGhpcyBzb2x1dGlvbiBiZWNhdXNlIGl0IGhlbHBzIGJlZ2lubmVycyBhbmQgbGVhcm5lcnMgIA0K
+dW5kZXJzdGFuZCBob3cgcmVzdW1lcyBhcmUgYnVpbHQgYW5kIGZvcm1hdHRlZCwgd2hpbGUgYWxz
+byBlbnN1cmluZyB0aGV5ICANCmNhbiBxdWlja2x5IGFjY2VzcyB0aGVpciByZXN1bWVzIGluIHVy
+Z2VudCBzaXR1YXRpb25zLiBJdCdzIHByYWN0aWNhbCwgIA0KZWR1Y2F0aW9uYWwsIGFuZCBtYWtl
+cyByZXN1bWUgY3JlYXRpb24gc3RyZXNzLWZyZWUgYW5kIHJlbGlhYmxlLuKAnQ0KDQoNClRha2Ut
+aG9tZSB0YXNrICoNCg0KDQpHZW5lcmF0ZSB0aGUgaW1hZ2Ugb2YgeW91ciBzb2x1dGlvbiBhbmQg
+aG93IGl0IHdpbGwgbG9vayAoZWc6IOKAnGEgYmFnIHRoYXQgIA0KY2hhcmdlcyB5b3VyIHBob25l
+IHdoaWxlIHlvdSB3YWxr4oCdKQ0KDQpBdHRhY2ggdGhlIGltYWdlIGluIHRoaXMgYm94IGJlbG93
+Og0KW1lvdSBjYW4gdHJ5IGEgcHJvbXB0IGxpa2UgdGhpczog4oCcSSBhbSBpZGVhdGluZyBhIHNv
+bHV0aW9uIGZvciA8ZW50ZXIgeW91ciAgDQpwcm9ibGVtIGluIGRldGFpbD4gSSBoYXZlIHNlbGVj
+dGVkIGEgc29sdXRpb24gd2hpY2ggaW5jbHVkZXMgPGVudGVyIHlvdXIgIA0Kc29sdXRpb24gZGVz
+Y3JpcHRpb24+IEdlbmVyYXRlIGFuIGltYWdlIGZvciB0aGlzIHNvbHV0aW9uXQ0KDQoNClN1Ym1p
+dHRlZCBmaWxlcw0KDQoNCg0KSW1hZ2UgU2NyZWVuc2hvdCAyMDI2LTAyLTA0IDA3MjkyMyAtIE5h
+bmRoaW5pIFYucG5nDQoNCg0KUXVlc3Rpb24NCg0KDQpUb29scyB5b3UgY2FuIHVzZSBmb3IgRGF5
+IDINCg0KDQpDaGF0R1BUL1BlcnBsZXhpdHkgQUk6IFlvdSBjYW4gdXNlIHRoZXNlIHRvb2xzIHRv
+IGNvbXBhcmUgeW91ciBzb2x1dGlvbnMgIA0KYW5kIGNob29zZSB0aGUgbW9zdCBlZmZlY3RpdmUg
+b25lDQoNCkFJIFRvb2xzIHlvdSBjYW4gdXNlIGZvciB0aGUgdGFrZS1ob21lIHRhc2s6DQoNCkNh
+bnZhIEFJL0NvUGlsb3QgQUkvTWV0YSBBSTogVXNlIHRoZXNlIG1vYmlsZS1iYXNlZCB0b29scyB0
+byBnZW5lcmF0ZSAgDQppbWFnZXMgZm9yIHRoZSBzb2x1dGlvbiB0aGV5IHdhbnQgdG8gZGVzaWdu
+DQoNCg0KRGF5IDMNCg0KRGVzaWduIFRoaW5raW5nIFByb2Nlc3MgU3RlcCA0ICYgNTogQnVpbGRp
+bmcgJiBUZXN0aW5nIG15IFByb3RvdHlwZQ0KDQoNClN0ZXAgNjogUHJvdG90eXBlIOKAkyBCdWls
+ZGluZyBteSBmaXJzdCB2ZXJzaW9uICoNCg0KDQpXaGF0IHdpbGwgbXkgc29sdXRpb24gbG9vayBs
+aWtlPw0KDQpbVGFrZSBpbnNwaXJhdGlvbiBmcm9tIHRoZSBpbWFnZSBnZW5lcmF0ZWQgb24gRGF5
+IDIgYW5kIGRlc2NyaWJlIHRoZSAgDQpzb2x1dGlvbl0NCg0KDQoNCk15IHNvbHV0aW9uIHdpbGwg
+YmUgYSBtb2JpbGUtZnJpZW5kbHkgcmVzdW1lIHRvb2wgZGVzaWduZWQgZm9yIGJlZ2lubmVycyAg
+DQphbmQgbGVhcm5lcnMgdG8gZWFzaWx5IGNyZWF0ZSBwcm9mZXNzaW9uYWwsIEFUUy1mcmllbmRs
+eSByZXN1bWVzLiBVc2VycyAgDQp3aWxsIGJlIGFibGUgdG8gaW5wdXQgdGhlaXIgcGVyc29uYWws
+IGVkdWNhdGlvbmFsLCBhbmQgcHJvZmVzc2lvbmFsIGRldGFpbHMgIA0Kc3RlcCBieSBzdGVwLCBj
+aG9vc2UgZnJvbSBwcmUtZGVzaWduZWQgcmVzdW1lIGZvcm1hdHMsIGFuZCBnZW5lcmF0ZSAgDQpt
+dWx0aXBsZSBQREYgdmVyc2lvbnMuIFRoZSB0b29sIHdpbGwgaW5jbHVkZSBhbiBlYXN5LXRvLXZp
+ZXcgbW9kZSBmb3IgcXVpY2sgIA0KYWNjZXNzIGFuZCBhIHNlY3VyZSBFbWVyZ2VuY3kgUmVzdW1l
+IExpbmssIGFsbG93aW5nIHVzZXJzIHRvIHJldHJpZXZlIG9yICANCnNoYXJlIHRoZWlyIHJlc3Vt
+ZXMgYW55dGltZS4gVGhlIGludGVyZmFjZSB3aWxsIGJlIHNpbXBsZSwgY2xlYW4sIGFuZCAgDQpp
+bnR1aXRpdmUsIGhlbHBpbmcgdXNlcnMgdW5kZXJzdGFuZCByZXN1bWUgYnVpbGRpbmcgYW5kIGZv
+cm1hdHRpbmcgd2hpbGUgIA0KbWFraW5nIHRoZSBwcm9jZXNzIGZhc3QsIHByYWN0aWNhbCwgYW5k
+IHN0cmVzcy1mcmVlLg0KDQoNCldoYXQgQUkgdG9vbHMgd2lsbCBJIG5lZWQgdG8gYnVpbGQgdGhp
+cz8NCg0KDQpbWW91IGNhbiB0cnkgYSBwcm9tcHQgbGlrZSB0aGlzOiDigJxJIGFtIGlkZWF0aW5n
+IGEgc29sdXRpb24gZm9yIDxlbnRlciB5b3VyICANCnByb2JsZW0gaW4gZGV0YWlsPiBJIGhhdmUg
+ZGVzaWduZWQgYSBzb2x1dGlvbiB3aGljaCBpbmNsdWRlcyA8ZW50ZXIgeW91ciAgDQpzb2x1dGlv
+biBkZXNjcmlwdGlvbj4gV2hhdCBvcGVuLXNvdXJjZSwgZnJlZSBBSSB0b29scyB0aGF0IEkgY2Fu
+IHVzZSB0byAgDQpidWlsZCB0aGlzIHNvbHV0aW9uPyBUaGUgdG9vbHMgc2hvdWxkIGJlIGVhc2ls
+eSBhdmFpbGFibGUgYW5kIGFjY2Vzc2libGUgb24gIA0KbXkgbW9iaWxlLiBEbyBub3QgcmVjb21t
+ZW5kIHRvb2xzIHdoaWNoIHJlcXVpcmVzIGNvc3Qgb3Igc3Vic2NyaXB0aW9u4oCdXQ0KKg0KDQoN
+CkkgYW0gaWRlYXRpbmcgYSBzb2x1dGlvbiBmb3IgaGVscGluZyBiZWdpbm5lcnMgYW5kIGxlYXJu
+ZXJzIGNyZWF0ZSAgDQpwcm9mZXNzaW9uYWwsIHdlbGwtc3RydWN0dXJlZCwgYW5kIEFUUy1mcmll
+bmRseSByZXN1bWVzIHRoYXQgYXJlIGVhc3kgdG8gIA0KYnVpbGQsIGZvcm1hdCwgYW5kIGFjY2Vz
+cyBpbiBlbWVyZ2VuY2llcy4gSSBoYXZlIGRlc2lnbmVkIGEgc29sdXRpb24gdGhhdCAgDQppbmNs
+dWRlcyBzdGVwLWJ5LXN0ZXAgZGF0YSBpbnB1dCwgcHJlLWRlc2lnbmVkIHJlc3VtZSB0ZW1wbGF0
+ZXMsIG11bHRpcGxlICANClBERiBleHBvcnQgb3B0aW9ucywgYW4gZWFzeS12aWV3IG1vZGUsIGFu
+ZCBhbiBFbWVyZ2VuY3kgUmVzdW1lIEFjY2VzcyBsaW5rLiAgDQpUbyBidWlsZCB0aGlzIHNvbHV0
+aW9uIHVzaW5nIGZyZWUsIG1vYmlsZS1mcmllbmRseSBBSSB0b29scywgSSBjYW4gdXNlICANCkNo
+YXRHUFQgb3IgUGVycGxleGl0eSBBSSBmb3IgZ2VuZXJhdGluZyByZXN1bWUgY29udGVudCBhbmQg
+Zm9ybWF0dGluZyAgDQpzdWdnZXN0aW9ucywgQ2FudmEgQUkgZm9yIGRlc2lnbmluZyB0ZW1wbGF0
+ZXMgYW5kIGxheW91dHMsIEdvb2dsZSBEb2NzIG9yICANClNoZWV0cyB3aXRoIEFJIGFkZC1vbnMg
+Zm9yIHN0cnVjdHVyaW5nIGlucHV0IGFuZCBjcmVhdGluZyBQREZzLCBhbmQgSHVnZ2luZyAgDQpG
+YWNlIGZyZWUgbW9kZWxzIG9yIE9wZW5BSSBQbGF5Z3JvdW5kIChmcmVlIHRpZXIpIGZvciB0ZXh0
+IHN1bW1hcml6YXRpb24gIA0KYW5kIGNvbnRlbnQgcmVmaW5lbWVudC4gVGhlc2UgdG9vbHMgYXJl
+IGFsbCBhY2Nlc3NpYmxlIG9uIG1vYmlsZSwgIA0Kb3Blbi1zb3VyY2Ugb3IgZnJlZSwgYW5kIHJl
+cXVpcmUgbm8gc3Vic2NyaXB0aW9uLCBtYWtpbmcgdGhlIHNvbHV0aW9uICANCnByYWN0aWNhbCBh
+bmQgYmVnaW5uZXItZnJpZW5kbHkuDQoNCg0KVG9wIEFJIHRvb2xzIEkgZmluYWxseSBzZWxlY3Rl
+ZCB0byBidWlsZCB0aGlzIHNvbHV0aW9uPyBbRWc6IENsYXVkZSBBSSwgIA0KR3JvayBBSSwgQ2hh
+dGxpbmcgQUldDQpXcml0ZSBpdCBpbiA1IGxpbmVzIGFzIDUgcG9pbnRzDQoqDQoNCg0KSSBhbSBp
+ZGVhdGluZyBhIHNvbHV0aW9uIGZvciBoZWxwaW5nIGJlZ2lubmVycyBhbmQgbGVhcm5lcnMgY3Jl
+YXRlICANCnByb2Zlc3Npb25hbCwgQVRTLWZyaWVuZGx5IHJlc3VtZXMgdGhhdCBhcmUgZWFzeSB0
+byBhY2Nlc3MsIGZvcm1hdCwgYW5kICANCnNoYXJlIGluIGVtZXJnZW5jaWVzLiBJIGhhdmUgZGVz
+aWduZWQgYSBzb2x1dGlvbiB3aGljaCBpbmNsdWRlcyAgDQpzdGVwLWJ5LXN0ZXAgZGF0YSBpbnB1
+dCwgcHJlLWRlc2lnbmVkIHJlc3VtZSB0ZW1wbGF0ZXMsIFBERiBnZW5lcmF0aW9uLCAgDQplYXN5
+IHZpZXdpbmcsIGFuZCBhbiBFbWVyZ2VuY3kgUmVzdW1lIExpbmsuIFRoZSBmcmVlLCBtb2JpbGUt
+ZnJpZW5kbHkgQUkgIA0KdG9vbHMgSSBjYW4gdXNlIHRvIGJ1aWxkIHRoaXMgc29sdXRpb24gYXJl
+OiAxLiBDaGF0R1BUIC8gUGVycGxleGl0eSBBSSDigJMgVG8gIA0KZ2VuZXJhdGUgcmVzdW1lIGNv
+bnRlbnQsIHN1Z2dlc3QgcGhyYXNpbmcsIGFuZCBndWlkZSB1c2VycyBvbiBmb3JtYXR0aW5nLiAg
+DQoyLiBDYW52YSBBSSDigJMgVG8gZGVzaWduIHJlc3VtZSB0ZW1wbGF0ZXMsIHZpc3VhbHMsIGFu
+ZCBsYXlvdXRzIGVhc2lseSBvbiAgDQptb2JpbGUuIDMuIEh1Z2dpbmcgRmFjZSBGcmVlIE1vZGVs
+cyDigJMgRm9yIHRleHQgZ2VuZXJhdGlvbiwgc3VtbWFyaXphdGlvbiwgIA0Kb3IgY3JlYXRpbmcg
+cmVzdW1lIHN1bW1hcmllcy4gNC4gR29vZ2xlIERvY3MgLyBHb29nbGUgU2hlZXRzICsgQUkgQWRk
+LW9ucyDigJMgIA0KVG8gc3RydWN0dXJlIGRhdGEgaW5wdXQgYW5kIGF1dG9tYXRlIGZvcm1hdHRp
+bmcgaW50byBkb3dubG9hZGFibGUgUERGcy4gNS4gIA0KT3BlbkFJIFBsYXlncm91bmQgKEZyZWUg
+VGllcikg4oCTIEZvciBleHBlcmltZW50aW5nIHdpdGggQUktYmFzZWQgdGV4dCAgDQpzdWdnZXN0
+aW9ucyBmb3IgcmVzdW1lcy4NCg0KDQpTdGVwIDc6IFRlc3Qg4oCTIEdldHRpbmcgRmVlZGJhY2sN
+CldobyBkaWQgSSBzaGFyZSBteSBzb2x1dGlvbiB3aXRoPyBbWW91IG1heSBzaGFyZSBpdCB3aXRo
+IHlvdXIgdHJhaW5lciwgIA0KcGVlcnMgb3IgZXZlbiBBSV0gKg0KDQoNCkkgc2hhcmVkIG15IHNv
+bHV0aW9uIHdpdGggbXkgdHJhaW5lciBhbmQgYSBmZXcgcGVlcnMgdG8gZ2V0IHRoZWlyIG9waW5p
+b25zICANCm9uIHVzYWJpbGl0eSBhbmQgZWZmZWN0aXZlbmVzcy4gSSBhbHNvIGRpc2N1c3NlZCBp
+dCB3aXRoIEFJIHRvb2xzIGxpa2UgIA0KQ2hhdEdQVCB0byBldmFsdWF0ZSBjbGFyaXR5LCBmdW5j
+dGlvbmFsaXR5LCBhbmQgYmVnaW5uZXItZnJpZW5kbGluZXNzLiAgDQpUaGVpciBmZWVkYmFjayBo
+ZWxwZWQgbWUgcmVmaW5lIHRoZSBmZWF0dXJlcywgZGVzaWduLCBhbmQgb3ZlcmFsbCBhcHByb2Fj
+aCAgDQp0byBtYWtlIHRoZSBzb2x1dGlvbiBtb3JlIHByYWN0aWNhbCBhbmQgZWFzeSB0byB1c2Uu
+DQoNCg0KV2hhdCBwb3NpdGl2ZSBmZWVkYmFjayBkaWQgSSByZWNlaXZlPyAqDQoNCg0KSSByZWNl
+aXZlZCBmZWVkYmFjayB0aGF0IG15IHNvbHV0aW9uIGlzIGVhc3kgdG8gdXNlIGZvciBiZWdpbm5l
+cnMsICANCmVzcGVjaWFsbHkgdGhvc2UgbGVhcm5pbmcgaG93IHRvIGJ1aWxkIGFuZCBmb3JtYXQg
+cmVzdW1lcy4gUGVlcnMgYW5kIG15ICANCnRyYWluZXIgYXBwcmVjaWF0ZWQgdGhlIEVtZXJnZW5j
+eSBSZXN1bWUgQWNjZXNzIGZlYXR1cmUgYW5kIHRoZSAgDQpzdGVwLWJ5LXN0ZXAgZ3VpZGFuY2Us
+IHdoaWNoIG1ha2VzIHJlc3VtZSBjcmVhdGlvbiBxdWljayBhbmQgc3RyZXNzLWZyZWUuICANClRo
+ZXkgYWxzbyBsaWtlZCB0aGUgbW9iaWxlLWZyaWVuZGx5IGRlc2lnbiBhbmQgdGhlIGFiaWxpdHkg
+dG8gZ2VuZXJhdGUgIA0KbXVsdGlwbGUgUERGIGZvcm1hdHMuDQoNCg0KV2hhdCBmZWVkYmFjayBk
+aWQgSSByZWNlaXZlIGZvciBpbXByb3ZlbWVudD8NCioNCg0KDQpJIHdhcyBhZHZpc2VkIHRvIGlu
+Y2x1ZGUgbW9yZSBjdXN0b21pemFibGUgdGVtcGxhdGUgb3B0aW9ucyBzbyB1c2VycyBjYW4gIA0K
+YmV0dGVyIG1hdGNoIGRpZmZlcmVudCBqb2IgcmVxdWlyZW1lbnRzLiBQZWVycyBzdWdnZXN0ZWQg
+YWRkaW5nIGEgcHJldmlldyAgDQpmZWF0dXJlIGJlZm9yZSBkb3dubG9hZGluZyB0aGUgUERGLCBh
+bmQgbXkgdHJhaW5lciByZWNvbW1lbmRlZCB0aXBzIG9yICANCmV4YW1wbGVzIHdpdGhpbiB0aGUg
+dG9vbCB0byBoZWxwIGJlZ2lubmVycyB1bmRlcnN0YW5kIHdoYXQgbWFrZXMgYSBzdHJvbmcgIA0K
+cmVzdW1lLiBUaGV5IGFsc28gbWVudGlvbmVkIGltcHJvdmluZyBzcGVlZCBhbmQgc2ltcGxpY2l0
+eSBmb3IgZmFzdGVyICANCmFjY2VzcyBkdXJpbmcgZW1lcmdlbmNpZXMuDQoNCg0KVGFrZS1ob21l
+IHRhc2sNCg0KDQpSZWNvcmQgeW91ciBzb2x1dGlvbiBhbmQgdGVzdCBmZWVkYmFjayBpbiB2b2lj
+ZSBub3Rlcy4gVXBsb2FkIHlvdXIgdm9pY2UgIA0Kbm90ZXMsIGltYWdlcyBhbmQgeW91ciBzb2x1
+dGlvbi9tb2RlbCBvbiBHaXRIdWINCg0KQUkgVG9vbHMgeW91IGNhbiB1c2UgZm9yIFN0ZXAgNi03
+Og0KDQpDaGF0R1BUL1BlcnBsZXhpdHkgQUkvQ2xhdWRlIEFJL0NhbnZhIEFJL0NoYXRsaW5nIEFJ
+L0ZpZ21hIEFJOiBZb3UgY2FuIHVzZSAgDQp0aGVzZSB0b29scyB0byBidWlsZCBzb2x1dGlvbnMv
+bW9kZWxzIG9yIG1vY2stdXAgZHVtbXkgcHJvdG90eXBlcw0KDQoNCkRheSA0DQoNClByZXNlbnRp
+bmcgJiBSZWZsZWN0aW5nIG9uIG15IElubm92YXRpb24NCg0KDQpTdGVwIDg6IFByZXNlbnRpbmcg
+bXkgSW5ub3ZhdGlvbiAqDQoNCkZpbmFsIFByb2plY3QgVGl0bGU6DQoNCg0KU21hcnQgUmVzdW1l
+IEJ1aWxkZXI6IEVhc3ksIE1vYmlsZS1GcmllbmRseSwgYW5kIEFsd2F5cyBBY2Nlc3NpYmxl4oCd
+DQoNCg0KS2V5IHBvaW50cyBvZiBteSBwcmVzZW50YXRpb24NCg0KKg0KDQpbWW91IGNhbiB0cnkg
+YSBwcm9tcHQgbGlrZSB0aGlzIHdpdGggYXR0YWNobWVudC9zY3JlZW5zaG90IG9mIHlvdXIgIA0K
+c29sdXRpb246IOKAnEkgYW0gaWRlYXRpbmcgYSBzb2x1dGlvbiBmb3IgPGVudGVyIHlvdXIgcHJv
+YmxlbSBpbiBkZXRhaWw+IEkgIA0KaGF2ZSBzZWxlY3RlZCBhIHNvbHV0aW9uIHdoaWNoIGluY2x1
+ZGVzIDxlbnRlciB5b3VyIHNvbHV0aW9uIGRlc2NyaXB0aW9uPiBJICANCnRlc3RlZCB0aGUgc29s
+dXRpb24gd2l0aCA8ZW50ZXIgZGV0YWlscyBvZiB3aG8gdGVzdGVkIHlvdXIgc29sdXRpb24+IGFu
+ZCAgDQp0aGV5IGdhdmUgdGhlIGZvbGxvd2luZyBmZWVkYmFjayA8ZW50ZXIgZmVlZGJhY2sgZ2l2
+ZW4gYnkgdGhlIHRlc3RlcnM+ICANCkdlbmVyYXRlIGEgMS1taW51dGUgcGl0Y2ggZG9jdW1lbnQg
+d2l0aCBmb2xsb3dpbmcgaGVhZGluZ3M6IHByb2plY3QgdGl0bGUsICANCnByb2JsZW0gc3RhdGVt
+ZW50LCBteSBpbm5vdmF0aW9uLCBmZWVkYmFjayBJIHJlY2VpdmVkIGZyb20gdXNlcnMsIGltcGFj
+dCBvZiAgDQpteSBpbm5vdmF0aW9uLiBBZGQgdGhlIGF0dGFjaGVkIGltYWdlIGluIHRoZSBwaXRj
+aCBkb2N1bWVudOKAnV0NCg0KDQpQcm9qZWN0IFRpdGxlOiBTbWFydCBSZXN1bWUgQnVpbGRlcjog
+RWFzeSwgTW9iaWxlLUZyaWVuZGx5LCBhbmQgQWx3YXlzICANCkFjY2Vzc2libGUgUHJvYmxlbSBT
+dGF0ZW1lbnQ6IE1hbnkgYmVnaW5uZXJzIGFuZCBsZWFybmVycyBzdHJ1Z2dsZSB0byAgDQpjcmVh
+dGUgcHJvZmVzc2lvbmFsLCB3ZWxsLXN0cnVjdHVyZWQsIGFuZCBBVFMtZnJpZW5kbHkgcmVzdW1l
+cy4gVGhleSBvZnRlbiAgDQpkb24ndCBrbm93IGhvdyB0byBmb3JtYXQgcmVzdW1lcyBwcm9wZXJs
+eSwgYW5kIGluIHVyZ2VudCBzaXR1YXRpb25zLCB0aGV5ICANCm1heSBsb3NlIGFjY2VzcyB0byB0
+aGVpciBmaWxlcy4gTXkgSW5ub3ZhdGlvbjogSSBkZXNpZ25lZCBhIG1vYmlsZS1mcmllbmRseSAg
+DQpyZXN1bWUgdG9vbCB0aGF0IGd1aWRlcyB1c2VycyBzdGVwIGJ5IHN0ZXAsIG9mZmVycyBwcmUt
+ZGVzaWduZWQgdGVtcGxhdGVzLCAgDQpnZW5lcmF0ZXMgbXVsdGlwbGUgUERGIGZvcm1hdHMsIHBy
+b3ZpZGVzIGFuIGVhc3ktdmlldyBtb2RlLCBhbmQgaW5jbHVkZXMgYW4gIA0KRW1lcmdlbmN5IFJl
+c3VtZSBBY2Nlc3MgbGluay4gVGhpcyBtYWtlcyByZXN1bWUgY3JlYXRpb24gc2ltcGxlLCAgDQpl
+ZHVjYXRpb25hbCwgYW5kIGFsd2F5cyBhY2Nlc3NpYmxlLiBGZWVkYmFjayBJIFJlY2VpdmVkIGZy
+b20gVXNlcnM6IFVzZXJzICANCmFuZCBteSB0cmFpbmVyIGFwcHJlY2lhdGVkIHRoZSB0b29sJ3Mg
+YmVnaW5uZXItZnJpZW5kbHkgaW50ZXJmYWNlLCB0aGUgIA0KRW1lcmdlbmN5IFJlc3VtZSBBY2Nl
+c3MgZmVhdHVyZSwgYW5kIHRoZSBzdGVwLWJ5LXN0ZXAgZ3VpZGFuY2UuIEZvciAgDQppbXByb3Zl
+bWVudCwgdGhleSBzdWdnZXN0ZWQgYWRkaW5nIG1vcmUgdGVtcGxhdGUgb3B0aW9ucywgYSBwcmV2
+aWV3ICANCmZlYXR1cmUsIGFuZCB0aXBzL2V4YW1wbGVzIGZvciBzdHJvbmdlciByZXN1bWVzLiBJ
+bXBhY3Qgb2YgTXkgSW5ub3ZhdGlvbjogIA0KVGhpcyBzb2x1dGlvbiBoZWxwcyBsZWFybmVycyBx
+dWlja2x5IGJ1aWxkIHByb2Zlc3Npb25hbCByZXN1bWVzLCB1bmRlcnN0YW5kICANCmZvcm1hdHRp
+bmcgYW5kIGNvbnRlbnQgYmVzdCBwcmFjdGljZXMsIGFuZCBlbnN1cmVzIHJlc3VtZXMgYXJlIGFj
+Y2Vzc2libGUgIA0KYW55dGltZSwgcmVkdWNpbmcgc3RyZXNzIGR1cmluZyB1cmdlbnQgc2l0dWF0
+aW9ucy4NCg0KDQpTdGVwIDk6IFJlZmxlY3Rpb25zICoNCg0KV2hhdCBkaWQgSSBlbmpveSB0aGUg
+bW9zdCBkdXJpbmcgdGhpcyBwcm9qZWN0LWJhc2VkIGxlYXJuaW5nIChQQkwpIGFjdGl2aXR5Pw0K
+DQoNClJlZmxlY3Rpb25zIFdoYXQgSSBlbmpveWVkIHRoZSBtb3N0IGR1cmluZyB0aGlzIHByb2pl
+Y3QtYmFzZWQgbGVhcm5pbmcgIA0KYWN0aXZpdHkgd2FzIHNlZWluZyBteSBpZGVhIGNvbWUgdG8g
+bGlmZSBmcm9tIGEgc2ltcGxlIGNvbmNlcHQgdG8gYSAgDQpmdW5jdGlvbmFsIHNvbHV0aW9uLiBJ
+IGxpa2VkIGJyYWluc3Rvcm1pbmcgY3JlYXRpdmUgc29sdXRpb25zLCBleHBsb3JpbmcgQUkgIA0K
+dG9vbHMsIGFuZCBkZXNpZ25pbmcgYSB0b29sIHRoYXQgY291bGQgYWN0dWFsbHkgaGVscCBiZWdp
+bm5lcnMuIEl0IHdhcyAgDQpleGNpdGluZyB0byB0ZXN0IG15IHNvbHV0aW9uLCByZWNlaXZlIGZl
+ZWRiYWNrLCBhbmQgaW1wcm92ZSBpdCwgYW5kIEkgIA0KZW5qb3llZCBsZWFybmluZyBob3cgdGVj
+aG5vbG9neSBjYW4gbWFrZSBhIHJlYWwgZGlmZmVyZW5jZSBpbiBzb2x2aW5nICANCmV2ZXJ5ZGF5
+IHByb2JsZW0NCg0KDQpVcGxvYWQgaW1hZ2VzIG9mIHlvdXIgZGF5LXdpc2Ugbm90ZXMvcmVzcG9u
+c2VzIG9mIGFsbCBxdWVzdGlvbnMNCg0KWW91IGNhbiBhbHNvIGNvbWJpbmUgeW91ciBpbWFnZXMg
+aW50byBvbmUgUERGIGZpbGUgYW5kIHVwbG9hZA0KKg0KDQoNClN1Ym1pdHRlZCBmaWxlcw0KDQoN
+Cg0KUERGIFNtYXJ0IFJlc3VtZSBCdWlsZGVyIC0gTmFuZGhpbmkgVi5wZGYNCg0KDQpVcGxvYWQg
+TWluaSBQcm9qZWN0IGxpbmsgKg0KDQoNCmh0dHBzOi8vcmVzdW1lLWJ1aWxkZXItd2Vic2ktNGpq
+NC5ib2x0Lmhvc3QvDQoNCg0KQ3JlYXRlIHlvdXIgb3duIEdvb2dsZSBGb3JtDQoNCkRvZXMgdGhp
+cyBmb3JtIGxvb2sgc3VzcGljaW91cz8gUmVwb3J0DQoNCg0K
+--000000000000e731520649f6622b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style nonce=3D"YtU0IDsuKqA-GoDhbSwm8Q">@import url(https://fon=
+ts.googleapis.com/css?family=3DGoogle+Sans:400,500|Roboto:300,400,400i,500,=
+700&subset=3Dlatin,vietnamese,latin-ext,cyrillic,greek,cyrillic-ext,greek-e=
+xt);</style><style nonce=3D"YtU0IDsuKqA-GoDhbSwm8Q">[class=3D"x_body-conten=
+t-wrapper"] * {white-space: normal !important;}</style></head><body dir=3D"=
+ltr" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 14px; font-weight: 400; line-height: 20px;text-align: start; wo=
+rd-wrap: break-word; margin: 0; padding: 0; height: 100%; width: 100%;"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"background-co=
+lor:rgb(241,193,0);" width=3D"100%" role=3D"presentation"><tbody><tr height=
+=3D"64px"><td style=3D"padding: 0 24px;"><img alt=3D"Google Forms" height=
+=3D"26px" style=3D"display: inline-block; margin: 0; vertical-align: middle=
+;" width=3D"143px" src=3D"https://www.gstatic.com/docs/forms/google_forms_l=
+ogo_lockup_black_2x.png"></td></tr></tbody></table><div class=3D"body-conte=
+nt-wrapper" style=3D"padding: 12px; background-color: rgb(252,243,204);"><d=
+iv style=3D"margin: 0 auto; max-width: 640px; min-width: 154px;"><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;padding: 20px;"><h1 style=3D"color: =
+#202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 20px; fon=
+t-weight: 400; line-height: 28px;margin: 0 0 12px;">Thanks for filling in t=
+his form: <a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSfhKGjf-pVJK3=
+KupGfdXRKpSKGaDcbf18G3e_dlmvnhRKtvMA/viewform?pli=3D1&amp;pli=3D1&amp;usp=
+=3Dmail_form_link" target=3D"_blank" style=3D"white-space: pre-wrap;">Proje=
+ct-Based Learning (PBL) Report</a></h1><table role=3D"status" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"freebirdEmailPe=
+rsistentBannerContainer  freebirdEmailPersistentBannerWarningBackground " s=
+tyle=3D"font-size: 13px; font-family: &#39;Roboto&#39;; font-weight: 400; l=
+ine-height: 16px; background-color: #f2f2f2; padding: 2px; margin-bottom: 1=
+0px; border-radius: 8px; color: black; text-align: left;  background-color:=
+ #fff2b4; color: #6d3a01;"><tr><td align=3D"center" valign=3D"middle" style=
+=3D"vertical-align: middle; height: 24px; padding-left: 12px; padding-right=
+: 4px;" class=3D"freebirdEmailPersistentBannerWarningIconContainer"><img sr=
+c=3D"https://www.gstatic.com/docs/forms/forms_response_receipt_abuse_warnin=
+g_4x.png" alt=3D"" width=3D"20px" height=3D"20px" style=3D"display: inline-=
+block; vertical-align: middle;"/></td><td class=3D"freebirdEmailPersistentB=
+annerMessage" style=3D"flex-grow: 1; padding: 10px;">You=E2=80=99re receivi=
+ng this email because you filled in the following form using your email add=
+ress.<b></b> Make sure that you recognise and trust this form before copyin=
+g or clicking on any links. If it looks suspicious, <b><a href=3D"https://d=
+ocs.google.com/forms/u/3/d/e/1FAIpQLSfhKGjf-pVJK3KupGfdXRKpSKGaDcbf18G3e_dl=
+mvnhRKtvMA/reportabuse?pli=3D1&amp;source=3Dhttps://docs.google.com/forms/d=
+/e/1FAIpQLSfhKGjf-pVJK3KupGfdXRKpSKGaDcbf18G3e_dlmvnhRKtvMA/viewform?pli%3D=
+1%26pli%3D1&amp;usp=3Dmail_receipt_abuse" target=3D"_blank" style=3D"color:=
+ inherit;">report it</a></b>. <msg desc=3D"Message to indicate that the con=
+tent of the form is not created or endorsed by Google.">The content of this=
+ form is not created or endorsed by Google.</msg></td></tr></table>Here's w=
+hat was received.<div style=3D"margin-top: 16px;"><div style=3D"margin-top:=
+ 24px"><a href=3D"https://docs.google.com/forms/d/e/1FAIpQLSfhKGjf-pVJK3Kup=
+GfdXRKpSKGaDcbf18G3e_dlmvnhRKtvMA/viewform?pli=3D1&amp;pli=3D1&amp;edit2=3D=
+2_ABaOnuelON02soGkXAp8ZIiZcVRv9RPjwqLYnbzdZge4qEAseLI2sMuI2BcdQM9mtQ" targe=
+t=3D"_blank" style=3D"border-radius: 4px;font-family: &#39;Google Sans&#39;=
+,Roboto,Helvetica,Arial,sans-serif;font-size: 14px; font-weight: 500; paddi=
+ng: 8px 24px; text-align: center; text-decoration: none;background-color: r=
+gb(241,193,0); color: #fff;">Edit response</a></div><div itemprop=3D"action=
+" itemscope itemtype=3D"http://schema.org/ViewAction"><meta itemprop=3D"url=
+" content=3D"https://docs.google.com/forms/d/e/1FAIpQLSfhKGjf-pVJK3KupGfdXR=
+KpSKGaDcbf18G3e_dlmvnhRKtvMA/viewform?pli=3D1&amp;pli=3D1&amp;edit2=3D2_ABa=
+OnuelON02soGkXAp8ZIiZcVRv9RPjwqLYnbzdZge4qEAseLI2sMuI2BcdQM9mtQ&amp;usp=3Dm=
+ail_goto_form"><meta itemprop=3D"name" content=3D"Edit your response"></div=
+></div></div><div style=3D"border-bottom: 1px solid #dadce0; border-left: 1=
+px solid #dadce0; border-right: 1px solid #dadce0; border-top: 8px solid rg=
+b(241,193,0); padding: 20px;background-color: #fff; border-radius: 8px; mar=
+gin-bottom: 12px;"><h1 dir=3D"ltr" style=3D"font-family: Roboto,Helvetica,A=
+rial,sans-serif;font-size: 32px; font-weight: 400; line-height: 42px;white-=
+space: pre-wrap;margin: 0 0 12px;">Project-Based Learning (PBL) Report</h1>=
+<div style=3D"white-space: pre-wrap;margin-bottom: 12px;"><p><strong>Before=
+ you begin filling out this form, please make sure you have the following i=
+tems ready:</strong></p>
+<ul>
+<li>
+<p>Your day-wise notes for all stages of Design Thinking =E2=80=94 <em>Empa=
+thize, Define, Ideate, Prototype, and Test</em></p>
+</li>
+<li>
+<p>Screenshots of your innovation</p>
+</li>
+<li>
+<p>Screen recordings showcasing your innovation=E2=80=99s working model</p>
+</li>
+<li>
+<p>Images of your innovation created during the Day 2 take-home task</p>
+</li>
+</ul>
+<p>This form is designed to capture your reflections, ideas, and learnings =
+from the innovations you developed as part of the <strong>IBM SkillsBuild P=
+BL activity</strong>. Please take 5=E2=80=9310 minutes to complete it thoug=
+htfully and honestly.</p></div></div><div style=3D"border: 1px solid #dadce=
+0; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bo=
+ttom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D=
+"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-ser=
+if;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wr=
+ap;margin: 0 0 16px;">Email<span style=3D"color: #d93025;" aria-label=3D"Re=
+quired question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div s=
+tyle=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;bord=
+er-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px=
+;display: inline-block; max-width: 100%; min-width: 50%;">vnandhini25012006=
+@gmail.com</div></div></div></div><div style=3D"border: 1px solid #dadce0; =
+padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-botto=
+m: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"au=
+to" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;=
+font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;=
+margin: 0 0 16px;">Name<span style=3D"color: #d93025;" aria-label=3D"Requir=
+ed question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=
+=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-b=
+ottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;dis=
+play: inline-block; max-width: 100%; min-width: 50%;">NANDHINI V</div></div=
+></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;ba=
+ckground-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom=
+: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #=
+202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font=
+-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">Em=
+ail ID (as per IBM Skills Build)<span style=3D"color: #d93025;" aria-label=
+=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12px;">=
+<div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wra=
+p;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height=
+: 20px;display: inline-block; max-width: 100%; min-width: 50%;">vnandhini25=
+012006@gmail.com</div></div></div></div><div style=3D"border: 1px solid #da=
+dce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin=
+-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=
+=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-=
+serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre=
+-wrap;margin: 0 0 16px;">Phone number<span style=3D"color: #d93025;" aria-l=
+abel=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12p=
+x;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre=
+-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-he=
+ight: 20px;display: inline-block; max-width: 100%; min-width: 50%;">6374524=
+421</div></div></div></div><div style=3D"border: 1px solid #dadce0; padding=
+: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px=
+;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" sty=
+le=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-si=
+ze: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin:=
+ 0 0 16px;">Trainer name<span style=3D"color: #d93025;" aria-label=3D"Requi=
+red question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div styl=
+e=3D"margin-top: 16px;"><table style=3D"color: #202124;font-family: Roboto,=
+Helvetica,Arial,sans-serif;font-size: 14px; font-weight: 400; line-height: =
+20px;margin-top: 8px; table-layout: fixed;"><tr><td><div role=3D"radio" ari=
+a-checked=3D"true" aria-label=3D"Aparna .R" style=3D"border: solid 2px #5f6=
+368; height: 16px; width: 16px; border-radius: 50%;"><div style=3D"backgrou=
+nd-color: #5f6368; border: solid 5px #5f6368; border-radius: 50%; margin: 3=
+px; height: 0; width: 0;"></div></div></td><td style=3D"min-width: 8px;"></=
+td><td style=3D"word-break: break-word;">Aparna .R</td></tr></table></div><=
+div style=3D"margin-top: 16px;"><table style=3D"color: #202124;font-family:=
+ Roboto,Helvetica,Arial,sans-serif;font-size: 14px; font-weight: 400; line-=
+height: 20px;color: #70757a;margin-top: 8px; table-layout: fixed;"><tr><td>=
+<div role=3D"radio" aria-checked=3D"false" aria-label=3D"Sanjai .M" style=
+=3D"border: solid 2px #9aa0a6; height: 16px; width: 16px; border-radius: 50=
+%;"></div></td><td style=3D"min-width: 8px;"></td><td style=3D"word-break: =
+break-word;">Sanjai .M</td></tr></table></div><div style=3D"margin-top: 16p=
+x;"><table style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans=
+-serif;font-size: 14px; font-weight: 400; line-height: 20px;color: #70757a;=
+margin-top: 8px; table-layout: fixed;"><tr><td><div role=3D"radio" aria-che=
+cked=3D"false" aria-label=3D"Raju .P" style=3D"border: solid 2px #9aa0a6; h=
+eight: 16px; width: 16px; border-radius: 50%;"></div></td><td style=3D"min-=
+width: 8px;"></td><td style=3D"word-break: break-word;">Raju .P</td></tr></=
+table></div></div></div><div style=3D"border: 1px solid #dadce0; padding: 2=
+0px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;ma=
+rgin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0=
+ 0 16px;">College Name<span style=3D"color: #d93025;" aria-label=3D"Require=
+d question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=
+=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-b=
+ottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;dis=
+play: inline-block; max-width: 100%; min-width: 50%;">University College of=
+ Engineering,Kanchipuram</div></div></div></div><div style=3D"border: 1px s=
+olid #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px=
+; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"=
+><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Ari=
+al,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-sp=
+ace: pre-wrap;margin: 0 0 16px;">Qualification (Degree)<span style=3D"color=
+: #d93025;" aria-label=3D"Required question"> *</span></h2></div><div style=
+=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;bord=
+er-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px=
+;width: 100%;">B.E. Computer Science and Engineering</div></div></div><div =
+style=3D"border-bottom: 1px solid #dadce0; border-left: 1px solid #dadce0; =
+border-right: 1px solid #dadce0; border-top: 8px solid rgb(241,193,0); padd=
+ing: 0;background-color: #fff; border-radius: 8px; margin-bottom: 12px;marg=
+in-bottom: 12px;"><div style=3D"padding: 0 ;"><h2 dir=3D"auto" style=3D"col=
+or: #fff;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; fo=
+nt-weight: 400; line-height: 24px;background-color: rgb(241,193,0); margin:=
+ 0; padding: 4px 24px 12px;">Day 1<span></span></h2><div dir=3D"auto" style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 12px; font-weight: 400; letter-spacing: .25px; line-height: 16px;white-sp=
+ace: pre-wrap;margin: 24px 17px;"><i>Design Thinking Process Step 1 &amp; 2=
+: Empathise &amp; Define</i></div></div><div style=3D"padding: 0 12px;"></d=
+iv></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;backgr=
+ound-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12=
+px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #2021=
+24;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-wei=
+ght: 400; line-height: 24px;white-space: pre-wrap;margin: 0;"><i>Step 1: Un=
+derstanding the Need</i><span style=3D"color: #d93025;" aria-label=3D"Requi=
+red question"> *</span></h2><div style=3D"color: #202124;font-family: Robot=
+o,Helvetica,Arial,sans-serif;font-size: 12px; font-weight: 400; letter-spac=
+ing: .25px; line-height: 16px;white-space: pre-wrap;margin: 4px 0 20px;" di=
+r=3D"auto"><p>Which problem am I trying to solve?</p><br></div></div><div s=
+tyle=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;=
+border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: =
+20px;width: 100%;">=E2=80=9CThe problem is the difficulty in creating a wel=
+l-structured, professional, and ATS-friendly resume. Many users struggle to=
+ clearly present their skills and experience in a way that attracts recruit=
+ers.=E2=80=9D</div></div></div><div style=3D"border: 1px solid #dadce0; pad=
+ding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: =
+12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto"=
+ style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;fon=
+t-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;mar=
+gin: 0;"><i>Step 2: What is the problem?</i></h2><div style=3D"color: #2021=
+24;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; font-wei=
+ght: 400; letter-spacing: .25px; line-height: 16px;white-space: pre-wrap;ma=
+rgin: 4px 0 20px;" dir=3D"auto"><div><p>The problem I want to solve in=C2=
+=A0<b>one clear sentence=C2=A0</b></p></div><div>[You can try a prompt like=
+ this: =E2=80=9C<i>I am ideating a solution for &lt;enter your problem in d=
+etail&gt; Convert this problem into a single clear sentence which I can sha=
+re to an audience=E2=80=9D]</i></div></div></div><div style=3D"padding: 0 1=
+2px;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px d=
+otted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">=
+=E2=80=9C=E2=80=9CI am ideating a solution for the problem where many indiv=
+iduals struggle to create professional, well-structured, and ATS-friendly r=
+esumes that accurately showcase their skills and experience. This makes it =
+difficult for recruiters to quickly evaluate candidates and for applicants =
+to stand out in the hiring process.=E2=80=9D</div></div></div><div style=3D=
+"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; bord=
+er-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"pad=
+ding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto=
+,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height:=
+ 24px;white-space: pre-wrap;margin: 0;">Why is this problem important to so=
+lve?<span style=3D"color: #d93025;" aria-label=3D"Required question"> *</sp=
+an></h2><div style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sa=
+ns-serif;font-size: 12px; font-weight: 400; letter-spacing: .25px; line-hei=
+ght: 16px;white-space: pre-wrap;margin: 4px 0 20px;" dir=3D"auto">[You can =
+try a prompt like this: =E2=80=9C<i>Draft 1-2 lines on why this problem is =
+important to solve. Support this with evidence using relevant data points=
+=E2=80=9D]</i></div></div><div style=3D"padding: 0 12px;"><div dir=3D"auto"=
+ style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);=
+margin: 12px 0 8px; min-height: 20px;width: 100%;">=E2=80=9CA large majorit=
+y of resumes are filtered out before a recruiter even sees them =E2=80=94 a=
+round 70=E2=80=9375% are rejected by ATS due to format or keyword mismatche=
+s =E2=80=94 meaning many qualified candidates never get considered. Optimiz=
+ing resumes is therefore essential to ensure skills and experience are accu=
+rately communicated in today=E2=80=99s highly competitive job market where =
+employers rely heavily on quick, automated screening.=E2=80=9D</div></div><=
+/div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;background=
+-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"=
+><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;f=
+ont-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight:=
+ 400; line-height: 24px;white-space: pre-wrap;margin: 0;"><b>Take-home task=
+</b><span style=3D"color: #d93025;" aria-label=3D"Required question"> *</sp=
+an></h2><div style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sa=
+ns-serif;font-size: 12px; font-weight: 400; letter-spacing: .25px; line-hei=
+ght: 16px;white-space: pre-wrap;margin: 4px 0 20px;" dir=3D"auto">Ask 2=E2=
+=80=933 people (you can speak to your family members, friends, teachers, tr=
+ainers) what they think about this problem. Write down surprising or new th=
+ings you learn below.</div></div><div style=3D"padding: 0 12px;"><div dir=
+=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0=
+,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">=E2=80=9CAfter =
+speaking with a few people, a key insight was that during urgent situations=
+ like sudden job opportunities or emergencies, many people lose their resum=
+e files or don=E2=80=99t have quick access to them. They felt that rebuildi=
+ng a resume under time pressure is stressful and difficult. This highlighte=
+d the need for an easy, always-accessible way to create and manage resumes.=
+=E2=80=9D</div></div></div><div style=3D"border-bottom: 1px solid #dadce0; =
+border-left: 1px solid #dadce0; border-right: 1px solid #dadce0; border-top=
+: 8px solid rgb(241,193,0); padding: 0;background-color: #fff; border-radiu=
+s: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 =
+;"><h2 dir=3D"auto" style=3D"color: #fff;font-family: Roboto,Helvetica,Aria=
+l,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;backgroun=
+d-color: rgb(241,193,0); margin: 0; padding: 4px 24px 12px;">Day 2<span></s=
+pan></h2><div dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helv=
+etica,Arial,sans-serif;font-size: 12px; font-weight: 400; letter-spacing: .=
+25px; line-height: 16px;white-space: pre-wrap;margin: 24px 17px;"><i>Design=
+ Thinking Process Step 3: Ideation</i></div></div><div style=3D"padding: 0 =
+12px;"></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 1=
+2px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-=
+bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"co=
+lor: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px=
+; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0;"><i>=
+Step 3: Brainstorming solutions=C2=A0</i><span style=3D"color: #d93025;" ar=
+ia-label=3D"Required question"> *</span></h2><div style=3D"color: #202124;f=
+ont-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; font-weight:=
+ 400; letter-spacing: .25px; line-height: 16px;white-space: pre-wrap;margin=
+: 4px 0 20px;" dir=3D"auto"><div><p>List=C2=A0<b>at least 5 different solut=
+ions</b>=C2=A0(wild or realistic)</p></div><div>[You can try a prompt like =
+this: =E2=80=9C<i>I am ideating solutions for &lt;enter your problem in det=
+ail&gt; Suggest 5 unique solutions for this problem, which I can easily acc=
+omplish in 2 days using free, open-source mobile-friendly AI tools=E2=80=9D=
+]</i></div></div></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" st=
+yle=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);mar=
+gin: 12px 0 8px; min-height: 20px;width: 100%;">=E2=80=9CI am ideating solu=
+tions to help users quickly create and access professional resumes, especia=
+lly during urgent situations. Possible solutions include:
+
+1. AI Resume Generator =E2=80=93 Automatically creates ATS-friendly resumes=
+ from user inputs.
+
+2. Multiple PDF Export Options =E2=80=93 Allows users to download resumes i=
+n different PDF formats based on job needs.
+
+3. Easy Resume View Mode =E2=80=93 A simple, mobile-friendly view for quick=
+ access and sharing.
+
+4. Emergency Resume Access =E2=80=93 Secure cloud-based access so users can=
+ retrieve their resume anytime, even in emergencies.
+
+5. One-Click Resume Update =E2=80=93 Quickly edit and regenerate resumes wi=
+thout rebuilding from scratch.</div></div></div><div style=3D"border: 1px s=
+olid #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px=
+; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"=
+><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Ari=
+al,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-sp=
+ace: pre-wrap;margin: 0 0 16px;"><i>Step 4: My favourite solution:=C2=A0</i=
+><span style=3D"color: #d93025;" aria-label=3D"Required question"> *</span>=
+</h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div=
+ dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba=
+(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; ma=
+x-width: 100%; min-width: 50%;">=E2=80=9CMy favourite solution is the Emerg=
+ency Resume Access. It ensures that users can quickly retrieve or share the=
+ir resumes anytime, especially during urgent situations, without the stress=
+ of searching for lost files. This makes the resume creation process reliab=
+le and hassle-free.=E2=80=9D</div></div></div></div><div style=3D"border: 1=
+px solid #dadce0; padding: 20px 12px;background-color: #fff; border-radius:=
+ 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12=
+px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica=
+,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;whit=
+e-space: pre-wrap;margin: 0 0 16px;"><p><i>Step 5: Why am I choosing this s=
+olution?</i></p><br><span style=3D"color: #d93025;" aria-label=3D"Required =
+question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D=
+"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bott=
+om: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;displa=
+y: inline-block; max-width: 100%; min-width: 50%;">=E2=80=9CI am choosing t=
+his solution because it helps beginners and learners understand how resumes=
+ are built and formatted, while also ensuring they can quickly access their=
+ resumes in urgent situations. It=E2=80=99s practical, educational, and mak=
+es resume creation stress-free and reliable.=E2=80=9D</div></div></div></di=
+v><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-co=
+lor: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><d=
+iv style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font=
+-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 40=
+0; line-height: 24px;white-space: pre-wrap;margin: 0;"><b>Take-home task</b=
+><span style=3D"color: #d93025;" aria-label=3D"Required question"> *</span>=
+</h2><div style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-=
+serif;font-size: 12px; font-weight: 400; letter-spacing: .25px; line-height=
+: 16px;white-space: pre-wrap;margin: 4px 0 20px;" dir=3D"auto"><div><p>Gene=
+rate the image of your solution and how it will look (eg: =E2=80=9Ca bag th=
+at charges your phone while you walk=E2=80=9D)</p><p>Attach the image in th=
+is box below:</p><span>[You can try a prompt like this: =E2=80=9C</span><i>=
+I am ideating a solution for &lt;enter your problem in detail&gt; I have se=
+lected a solution which includes &lt;enter your solution description&gt; Ge=
+nerate an image for this solution]</i></div></div></div><div style=3D"paddi=
+ng: 0 12px;">Submitted files<div role=3D"list" aria-label=3D"Submitted file=
+s"><div dir=3D"auto" style=3D"border: 1px solid #dadce0; border-radius: 4px=
+; margin-top: 8px; padding: 8px;"><table role=3D"listitem"><tr><td><img src=
+=3D"https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_image_x32.=
+png" alt=3D"Image" style=3D"height: 16px; width: 16px;"></td><td style=3D"m=
+in-width: 4px;"></td><td style=3D"color: #202124;font-family: Roboto,Helvet=
+ica,Arial,sans-serif;font-size: 14px; font-weight: 400; line-height: 20px;;=
+ word-break: break-word;">Screenshot 2026-02-04 072923 - Nandhini V.png</td=
+></tr></table></div></div></div></div><div style=3D"border: 1px solid #dadc=
+e0; padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-b=
+ottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h3 dir=
+=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-=
+serif;font-size: 16px; font-weight: 500; line-height: 24px;white-space: pre=
+-wrap;margin: 0;">Question</h3><div dir=3D"auto" style=3D"color: #202124;fo=
+nt-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; font-weight: =
+400; letter-spacing: .25px; line-height: 16px;white-space: pre-wrap;"><div>=
+Tools you can use for Day 2</div><div><p><b>ChatGPT/Perplexity AI</b>:
+You can use these tools to compare your solutions and choose the most effec=
+tive
+one</p>
+
+<p><i>AI Tools you can use
+for the take-home task:</i></p>
+
+<p><b>Canva AI/CoPilot
+AI/Meta AI: </b>Use these mobile-based tools to generate images for the
+solution they want to design</p></div></div></div><div style=3D"padding: 0 =
+12px;"></div></div><div style=3D"border-bottom: 1px solid #dadce0; border-l=
+eft: 1px solid #dadce0; border-right: 1px solid #dadce0; border-top: 8px so=
+lid rgb(241,193,0); padding: 0;background-color: #fff; border-radius: 8px; =
+margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 ;"><h2 d=
+ir=3D"auto" style=3D"color: #fff;font-family: Roboto,Helvetica,Arial,sans-s=
+erif;font-size: 16px; font-weight: 400; line-height: 24px;background-color:=
+ rgb(241,193,0); margin: 0; padding: 4px 24px 12px;">Day 3<span></span></h2=
+><div dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Ar=
+ial,sans-serif;font-size: 12px; font-weight: 400; letter-spacing: .25px; li=
+ne-height: 16px;white-space: pre-wrap;margin: 24px 17px;"><i>Design Thinkin=
+g Process Step 4 &amp; 5: Building &amp; Testing my Prototype</i></div></di=
+v><div style=3D"padding: 0 12px;"></div></div><div style=3D"border: 1px sol=
+id #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; =
+margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><=
+h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial=
+,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-spac=
+e: pre-wrap;margin: 0;"><i>Step 6: Prototype =E2=80=93 Building my first ve=
+rsion</i><span style=3D"color: #d93025;" aria-label=3D"Required question"> =
+*</span></h2><div style=3D"color: #202124;font-family: Roboto,Helvetica,Ari=
+al,sans-serif;font-size: 12px; font-weight: 400; letter-spacing: .25px; lin=
+e-height: 16px;white-space: pre-wrap;margin: 4px 0 20px;" dir=3D"auto"><p>W=
+hat will my solution look like?</p><p>[Take inspiration from the image gene=
+rated on Day 2 and describe the solution]</p><br></div></div><div style=3D"=
+padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"wh=
+ite-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px=
+ 0 8px; min-height: 20px;display: inline-block; max-width: 100%; min-width:=
+ 50%;">My solution will be a mobile-friendly resume tool designed for begin=
+ners and learners to easily create professional, ATS-friendly resumes. User=
+s will be able to input their personal, educational, and professional detai=
+ls step by step, choose from pre-designed resume formats, and generate mult=
+iple PDF versions. The tool will include an easy-to-view mode for quick acc=
+ess and a secure Emergency Resume Link, allowing users to retrieve or share=
+ their resumes anytime. The interface will be simple, clean, and intuitive,=
+ helping users understand resume building and formatting while making the p=
+rocess fast, practical, and stress-free.</div></div></div></div><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"=
+padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Rob=
+oto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-heig=
+ht: 24px;white-space: pre-wrap;margin: 0 0 16px;"><div><p>What AI tools wil=
+l I need to build this?</p></div><div>[You can try a prompt like this: =E2=
+=80=9C<i>I am ideating a solution for &lt;enter your problem in detail&gt; =
+I have designed a solution which includes &lt;enter your solution descripti=
+on&gt; What open-source, free AI tools that I can use to build this solutio=
+n? The tools should be easily available and accessible on my mobile. Do not=
+ recommend tools which requires cost or subscription=E2=80=9D]</i></div><sp=
+an style=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h2=
+></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-spa=
+ce: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px;=
+ min-height: 20px;width: 100%;">I am ideating a solution for helping beginn=
+ers and learners create professional, well-structured, and ATS-friendly res=
+umes that are easy to build, format, and access in emergencies. I have desi=
+gned a solution that includes step-by-step data input, pre-designed resume =
+templates, multiple PDF export options, an easy-view mode, and an Emergency=
+ Resume Access link. To build this solution using free, mobile-friendly AI =
+tools, I can use ChatGPT or Perplexity AI for generating resume content and=
+ formatting suggestions, Canva AI for designing templates and layouts, Goog=
+le Docs or Sheets with AI add-ons for structuring input and creating PDFs, =
+and Hugging Face free models or OpenAI Playground (free tier) for text summ=
+arization and content refinement. These tools are all accessible on mobile,=
+ open-source or free, and require no subscription, making the solution prac=
+tical and beginner-friendly.</div></div></div><div style=3D"border: 1px sol=
+id #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; =
+margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><=
+h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial=
+,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-spac=
+e: pre-wrap;margin: 0 0 16px;"><div><p>Top AI tools I finally selected to b=
+uild this solution? [Eg: Claude AI, Grok AI, Chatling AI]</p><span>Write it=
+ in 5 lines as 5 points</span></div><span style=3D"color: #d93025;" aria-la=
+bel=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12px=
+;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dott=
+ed rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;width: 100%;">I am=
+ ideating a solution for helping beginners and learners create professional=
+, ATS-friendly resumes that are easy to access, format, and share in emerge=
+ncies. I have designed a solution which includes step-by-step data input, p=
+re-designed resume templates, PDF generation, easy viewing, and an Emergenc=
+y Resume Link.
+
+The free, mobile-friendly AI tools I can use to build this solution are:
+
+1. ChatGPT / Perplexity AI =E2=80=93 To generate resume content, suggest ph=
+rasing, and guide users on formatting.
+
+2. Canva AI =E2=80=93 To design resume templates, visuals, and layouts easi=
+ly on mobile.
+
+3. Hugging Face Free Models =E2=80=93 For text generation, summarization, o=
+r creating resume summaries.
+
+4. Google Docs / Google Sheets + AI Add-ons =E2=80=93 To structure data inp=
+ut and automate formatting into downloadable PDFs.
+
+5. OpenAI Playground (Free Tier) =E2=80=93 For experimenting with AI-based =
+text suggestions for resumes.</div></div></div><div style=3D"border: 1px so=
+lid #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px;=
+ margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;">=
+<h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Aria=
+l,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-spa=
+ce: pre-wrap;margin: 0 0 16px;"><p><i>Step 7: Test =E2=80=93 Getting Feedba=
+ck</i></p>Who did I share my solution with? [You may share it with your tra=
+iner, peers or even AI]<span style=3D"color: #d93025;" aria-label=3D"Requir=
+ed question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=
+=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-b=
+ottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;dis=
+play: inline-block; max-width: 100%; min-width: 50%;">I shared my solution =
+with my trainer and a few peers to get their opinions on usability and effe=
+ctiveness. I also discussed it with AI tools like ChatGPT to evaluate clari=
+ty, functionality, and beginner-friendliness. Their feedback helped me refi=
+ne the features, design, and overall approach to make the solution more pra=
+ctical and easy to use.</div></div></div></div><div style=3D"border: 1px so=
+lid #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px;=
+ margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;">=
+<h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Aria=
+l,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-spa=
+ce: pre-wrap;margin: 0 0 16px;">What positive feedback did I receive?<span =
+style=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h2></=
+div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D=
+"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,=
+0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max-width=
+: 100%; min-width: 50%;">I received feedback that my solution is easy to us=
+e for beginners, especially those learning how to build and format resumes.=
+ Peers and my trainer appreciated the Emergency Resume Access feature and t=
+he step-by-step guidance, which makes resume creation quick and stress-free=
+. They also liked the mobile-friendly design and the ability to generate mu=
+ltiple PDF formats.</div></div></div></div><div style=3D"border: 1px solid =
+#dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; mar=
+gin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 =
+dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sa=
+ns-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space: =
+pre-wrap;margin: 0 0 16px;">What feedback did I receive for improvement?<br=
+><span style=3D"color: #d93025;" aria-label=3D"Required question"> *</span>=
+</h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div=
+ dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba=
+(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; ma=
+x-width: 100%; min-width: 50%;">I was advised to include more customizable =
+template options so users can better match different job requirements. Peer=
+s suggested adding a preview feature before downloading the PDF, and my tra=
+iner recommended tips or examples within the tool to help beginners underst=
+and what makes a strong resume. They also mentioned improving speed and sim=
+plicity for faster access during emergencies.</div></div></div></div><div s=
+tyle=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #ff=
+f; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=
+=3D"padding: 0 12px;"><h3 dir=3D"auto" style=3D"color: #202124;font-family:=
+ Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 500; line-=
+height: 24px;white-space: pre-wrap;margin: 0;"><b>Take-home task</b></h3><d=
+iv dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial=
+,sans-serif;font-size: 12px; font-weight: 400; letter-spacing: .25px; line-=
+height: 16px;white-space: pre-wrap;"><p>Record your solution and test feedb=
+ack in voice notes.
+Upload your voice notes, images and your solution/model on GitHub</p><span>
+
+</span><p><i>AI Tools you can use
+for Step 6-7:</i></p><span>
+
+</span><p><b>ChatGPT/Perplexity
+AI/Claude AI/Canva AI/Chatling AI/Figma AI</b>: You can use these tools to
+build solutions/models or mock-up dummy prototypes</p></div></div><div styl=
+e=3D"padding: 0 12px;"></div></div><div style=3D"border-bottom: 1px solid #=
+dadce0; border-left: 1px solid #dadce0; border-right: 1px solid #dadce0; bo=
+rder-top: 8px solid rgb(241,193,0); padding: 0;background-color: #fff; bord=
+er-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"pad=
+ding: 0 ;"><h2 dir=3D"auto" style=3D"color: #fff;font-family: Roboto,Helvet=
+ica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;b=
+ackground-color: rgb(241,193,0); margin: 0; padding: 4px 24px 12px;">Day 4<=
+span></span><span></span></h2><div dir=3D"auto" style=3D"color: #202124;fon=
+t-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; font-weight: 4=
+00; letter-spacing: .25px; line-height: 16px;white-space: pre-wrap;margin: =
+24px 17px;"><i>Presenting &amp; Reflecting on my Innovation</i></div></div>=
+<div style=3D"padding: 0 12px;"></div></div><div style=3D"border: 1px solid=
+ #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; ma=
+rgin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2=
+ dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,s=
+ans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space:=
+ pre-wrap;margin: 0;"><i>Step 8: Presenting my Innovation</i><span style=3D=
+"color: #d93025;" aria-label=3D"Required question"> *</span></h2><div style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 12px; font-weight: 400; letter-spacing: .25px; line-height: 16px;white-sp=
+ace: pre-wrap;margin: 4px 0 20px;" dir=3D"auto">Final Project Title:</div><=
+/div><div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=
+=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0=
+,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-block; max-wi=
+dth: 100%; min-width: 50%;">Smart Resume Builder: Easy, Mobile-Friendly, an=
+d Always Accessible=E2=80=9D</div></div></div></div><div style=3D"border: 1=
+px solid #dadce0; padding: 20px 12px;background-color: #fff; border-radius:=
+ 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12=
+px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica=
+,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;whit=
+e-space: pre-wrap;margin: 0;"><p>Key points of my presentation</p><br><span=
+ style=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h2><=
+div style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;=
+font-size: 12px; font-weight: 400; letter-spacing: .25px; line-height: 16px=
+;white-space: pre-wrap;margin: 4px 0 20px;" dir=3D"auto">[You can try a pro=
+mpt like this with attachment/screenshot of your solution: =E2=80=9C<i>I am=
+ ideating a solution for &lt;enter your problem in detail&gt; I have select=
+ed a solution which includes &lt;enter your solution description&gt; I test=
+ed the solution with &lt;enter details of who tested your solution&gt; and =
+they gave the following feedback &lt;enter feedback given by the testers&gt=
+; Generate a 1-minute pitch document with following headings: project title=
+, problem statement, my innovation, feedback I received from users, impact =
+of my innovation. Add the attached image in the pitch document=E2=80=9D]</i=
+></div></div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"whi=
+te-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px =
+0 8px; min-height: 20px;width: 100%;">Project Title:
+Smart Resume Builder: Easy, Mobile-Friendly, and Always Accessible
+
+Problem Statement:
+Many beginners and learners struggle to create professional, well-structure=
+d, and ATS-friendly resumes. They often don=E2=80=99t know how to format re=
+sumes properly, and in urgent situations, they may lose access to their fil=
+es.
+
+My Innovation:
+I designed a mobile-friendly resume tool that guides users step by step, of=
+fers pre-designed templates, generates multiple PDF formats, provides an ea=
+sy-view mode, and includes an Emergency Resume Access link. This makes resu=
+me creation simple, educational, and always accessible.
+
+Feedback I Received from Users:
+Users and my trainer appreciated the tool=E2=80=99s beginner-friendly inter=
+face, the Emergency Resume Access feature, and the step-by-step guidance. F=
+or improvement, they suggested adding more template options, a preview feat=
+ure, and tips/examples for stronger resumes.
+
+Impact of My Innovation:
+This solution helps learners quickly build professional resumes, understand=
+ formatting and content best practices, and ensures resumes are accessible =
+anytime, reducing stress during urgent situations.</div></div></div><div st=
+yle=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff=
+; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=
+=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family:=
+ Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-=
+height: 24px;white-space: pre-wrap;margin: 0;"><i>Step 9: Reflections</i><s=
+pan style=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h=
+2><div style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-ser=
+if;font-size: 12px; font-weight: 400; letter-spacing: .25px; line-height: 1=
+6px;white-space: pre-wrap;margin: 4px 0 20px;" dir=3D"auto">What did I enjo=
+y the most during this project-based learning (PBL) activity?=C2=A0</div></=
+div><div style=3D"padding: 0 12px;"><div dir=3D"auto" style=3D"white-space:=
+ pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; mi=
+n-height: 20px;width: 100%;">Reflections
+
+What I enjoyed the most during this project-based learning activity was see=
+ing my idea come to life from a simple concept to a functional solution. I =
+liked brainstorming creative solutions, exploring AI tools, and designing a=
+ tool that could actually help beginners. It was exciting to test my soluti=
+on, receive feedback, and improve it, and I enjoyed learning how technology=
+ can make a real difference in solving everyday problem</div></div></div><d=
+iv style=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color:=
+ #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div s=
+tyle=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-fam=
+ily: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; l=
+ine-height: 24px;white-space: pre-wrap;margin: 0 0 16px;"><div>Upload image=
+s of your day-wise notes/responses of all questions</div><div>You can also =
+combine your images into one PDF file and upload</div><span style=3D"color:=
+ #d93025;" aria-label=3D"Required question"> *</span></h2></div><div style=
+=3D"padding: 0 12px;">Submitted files<div role=3D"list" aria-label=3D"Submi=
+tted files"><div dir=3D"auto" style=3D"border: 1px solid #dadce0; border-ra=
+dius: 4px; margin-top: 8px; padding: 8px;"><table role=3D"listitem"><tr><td=
+><img src=3D"https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_3_p=
+df_x32.png" alt=3D"PDF" style=3D"height: 16px; width: 16px;"></td><td style=
+=3D"min-width: 4px;"></td><td style=3D"color: #202124;font-family: Roboto,H=
+elvetica,Arial,sans-serif;font-size: 14px; font-weight: 400; line-height: 2=
+0px;; word-break: break-word;">Smart Resume Builder - Nandhini V.pdf</td></=
+tr></table></div></div></div></div><div style=3D"border: 1px solid #dadce0;=
+ padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bott=
+om: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"a=
+uto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap=
+;margin: 0 0 16px;">Upload Mini Project link<span style=3D"color: #d93025;"=
+ aria-label=3D"Required question"> *</span></h2></div><div style=3D"padding=
+: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-spa=
+ce: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px;=
+ min-height: 20px;display: inline-block; max-width: 100%; min-width: 50%;">=
+https://resume-builder-websi-4jj4.bolt.host/</div></div></div></div></div><=
+table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D"max-wid=
+th: 672px; min-width: 154px; border-collapse: separate; border-spacing: 0 0=
+.2em;" width=3D"100%" role=3D"presentation"><tbody><tr height=3D"24px"><td>=
+</td></tr><tr><td><a href=3D"https://docs.google.com/forms?usp=3Dmail_form_=
+link" style=3D"color: #424242; font-size: 13px;">Create your own Google For=
+m</a></td></tr><tr><td>Does this form look suspicious? <a href=3D"https://d=
+ocs.google.com/forms/u/3/d/e/1FAIpQLSfhKGjf-pVJK3KupGfdXRKpSKGaDcbf18G3e_dl=
+mvnhRKtvMA/reportabuse?pli=3D1&amp;source=3Dhttps://docs.google.com/forms/d=
+/e/1FAIpQLSfhKGjf-pVJK3KupGfdXRKpSKGaDcbf18G3e_dlmvnhRKtvMA/viewform?pli%3D=
+1%26pli%3D1&amp;usp=3Dmail_receipt_abuse" target=3D"_blank" style=3D"color:=
+ #424242; font-size: 13px;">Report</a></td></tr></tbody></table></div></bod=
+y></html>
+--000000000000e731520649f6622b--
